@@ -1,0 +1,39 @@
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    input {
+        padding: 12px;
+        border: 1px solid var(--light-gray);
+        border-radius: 8px;
+        font-size: 14px;
+    }
+
+    input:focus {
+        border-color: var(--blue);
+        outline: none;
+    }
+
+    button {
+        position: relative;
+        padding: 12px;
+        background-color: var(--blue);
+        color: var(--white);
+        border: none;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: opacity 0.3s ease;
+
+        i {
+            position: absolute;
+            right: 18px;
+        }
+    }
+
+    button:hover {
+        opacity: 0.8;
+    }
+}

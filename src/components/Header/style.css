@@ -1,0 +1,42 @@
+
+header {
+    background-color: var(--darker-blue);
+    color: var(--white);
+    display: flex;
+    position: sticky;
+    top: 0;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 10px 10%;
+
+    .profile {
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+
+        i {
+            display: flex;
+            font-size: 14px;
+            width: 28px;
+            height: 28px;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--light-blue);
+            color: var(--white);
+            border-radius: 50%;
+        }
+
+        h2 {
+            font-size: 16px;
+            margin-right: 12px;
+            font-weight: 500;
+        }
+    }
+
+    h1 {
+        font-size: 20px;
+        font-weight: 600;
+        margin-left: 20px;
+    }
+}
