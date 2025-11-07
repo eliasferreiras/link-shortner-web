@@ -1,7 +1,8 @@
 form {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 12px;
+    width: 100%;
 
     input {
         padding: 12px;
@@ -15,6 +16,14 @@ form {
         outline: none;
     }
 
+    .inputUrl {
+        flex: 3 1 auto;
+    }
+
+    .inputTitle {
+        flex: 2 1 auto;
+    }
+
     button {
         position: relative;
         padding: 12px;
@@ -25,6 +34,7 @@ form {
         font-size: 14px;
         font-weight: 600;
         cursor: pointer;
+        flex: 1 0 150px;
         transition: opacity 0.3s ease;
 
         i {
@@ -35,5 +45,15 @@ form {
 
     button:hover {
         opacity: 0.8;
+    }
+}
+
+@media screen and (max-width: 610px) {
+    form {
+        flex-direction: column;
+
+        button {
+            flex: 0 0 auto;
+        }
     }
 }

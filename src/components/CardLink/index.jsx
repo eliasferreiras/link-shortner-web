@@ -2,7 +2,7 @@ import './style.css'
 
 export default function CardLink({ link, deleteAction }) {
 
-    const baseUrl = import.meta.env.VITE_REDIRECT_URL
+    const baseUrl = import.meta.env.VITE_REDIRECT_URL || "http://localhost:4000/"
 
     return (
         <div className="card-links card-grid">
