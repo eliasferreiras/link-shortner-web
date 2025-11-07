@@ -9,6 +9,7 @@ form {
         border: 1px solid var(--light-gray);
         border-radius: 8px;
         font-size: 14px;
+        min-width: 150px;
     }
 
     input:focus {
@@ -25,6 +26,7 @@ form {
     }
 
     button {
+        flex: 1 0 150px;
         position: relative;
         padding: 12px;
         background-color: var(--blue);
@@ -34,7 +36,6 @@ form {
         font-size: 14px;
         font-weight: 600;
         cursor: pointer;
-        flex: 1 0 150px;
         transition: opacity 0.3s ease;
 
         i {
