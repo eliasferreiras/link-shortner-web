@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+
+
 .container {
     background-color: var(--light-gray);
     height: 100%;
@@ -27,22 +29,22 @@ h1 {
     font-size: 20px;
     font-weight: 600;
     text-align: left;
+    margin-bottom: 5px;
 }
 
 .create {
     padding: 20px;
-    margin-top: 5px;
+    margin-bottom: 20px;
 }
 
 .links {
-    margin-top: 20px;
-    padding: 20px;
     display: flex;
     flex-direction: column-reverse;
+    gap: 15px;
 
-    .card-grid {
+    /* .card-grid {
         display: grid;
         grid-template-columns: 25% 2fr 3fr 24px;
         column-gap: 18px;
-    }
+    } */
 }

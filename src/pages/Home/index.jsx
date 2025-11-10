@@ -32,7 +32,8 @@ export default function Home() {
                     <FormLink createAction={createLink}/>
                 </section>
 
-                <section className="links shadow-container mainContent">
+                <h1 className="mainContent">Links:</h1>
+                <section className="links mainContent">
                     { 
                         links.map(link => {
                             return (
@@ -42,8 +43,6 @@ export default function Home() {
                             )
                         })
                     }
-
-                    <LinkTitles />
                 </section>
             </main>
         </div>
