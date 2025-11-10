@@ -4,6 +4,17 @@ export default function CardLink({ link, deleteAction }) {
 
     const baseUrl = import.meta.env.VITE_REDIRECT_URL || "http://localhost:4000/"
 
+    async function copyToClipboard() {
+        try {
+            await navigator.clipboard.writeText(
+                baseUrl+link.short_code
+            )
+            alert("Link copiado!")
+        } catch (error) {
+            console.error("Erro ao copiar:", error)
+        }
+    }
+
     return (
         <div className="card-links shadow-container">
             <div className="content">
@@ -15,7 +26,7 @@ export default function CardLink({ link, deleteAction }) {
                     <a href={baseUrl+link.short_code}>
                         {baseUrl+link.short_code}
                     </a>
-                    <button>
+                    <button onClick={copyToClipboard}>
                         <i className="fa-solid fa-copy"></i>
                     </button>
                     
