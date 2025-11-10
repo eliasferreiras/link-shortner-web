@@ -5,6 +5,7 @@ import homeViewModel from './viewModel'
 import Header from '../../components/Header'
 import CardLink from '../../components/CardLink'
 import FormLink from '../../components/FormLink'
+import Footer from '../../components/Footer'
 
 export default function Home() {
 
@@ -20,7 +21,6 @@ export default function Home() {
     }, [])
 
     return (
-        
         <div className="container">
             <Header />
 
@@ -44,6 +44,8 @@ export default function Home() {
                     }
                 </section>
             </main>
+
+            <Footer />
         </div>
     )
 }
