@@ -1,4 +1,5 @@
 import './style.css'
+import { formatDate } from '../../helpers/dateHelper.js'
 
 export default function CardLink({ link, deleteAction }) {
 
@@ -41,7 +42,7 @@ export default function CardLink({ link, deleteAction }) {
 
                 <div className="cardDate">
                     <i className="fa-solid fa-calendar"></i>
-                    10 Nov, 2025
+                    { formatDate(link.created_at) }
                 </div>
             </div>
 
