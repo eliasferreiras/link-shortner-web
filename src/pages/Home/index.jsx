@@ -3,7 +3,6 @@ import { useEffect } from 'react'
 import homeViewModel from './viewModel'
 
 import Header from '../../components/Header'
-import LinkTitles from '../../components/LinkTitles'
 import CardLink from '../../components/CardLink'
 import FormLink from '../../components/FormLink'
 
@@ -26,13 +25,13 @@ export default function Home() {
             <Header />
 
             <main>
-                <h1 className="mainContent">Criar link curto:</h1>
+                <h1 className="mainContent">Criar link curto</h1>
                 <section className="create shadow-container mainContent">
-                    
+                    <h2>Detalhes do Link</h2>
                     <FormLink createAction={createLink}/>
                 </section>
 
-                <h1 className="mainContent">Links:</h1>
+                <h1 className="mainContent">Links</h1>
                 <section className="links mainContent">
                     { 
                         links.map(link => {
