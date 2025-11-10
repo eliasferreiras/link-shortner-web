@@ -22,9 +22,15 @@ export default function FormLink({ createAction }) {
 
     return (
         <form action="#">
-            <input type="url" className="inputUrl" name="target_url" ref={targetUrlInput} placeholder="URL de destino" />
+            <div className="input-content inputUrl">
+                <h3>URL de destino</h3>
+                <input type="url" name="target_url" ref={targetUrlInput} placeholder="https://exemplo.com/link-longo" />
+            </div>
 
-            <input type="text" className="inputTitle" name="title" ref={titleInput} placeholder="Título (opcional)" />
+            <div className="input-content inputTitle">
+                <h3>Título (opcional)</h3>
+                <input type="text" name="title" ref={titleInput} />
+            </div>
             
             <button type="button" onClick={createLink}>
                 <span>Salvar</span> <i className="fa-solid fa-download"></i>
