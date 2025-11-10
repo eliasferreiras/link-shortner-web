@@ -49,14 +49,3 @@ main {
         gap: 15px;
     }
 }
-
-footer {
-    width: 100%;
-    padding: 10px 20px;
-
-    p {
-        font-size: 14px;
-        color: var(--gray);
-        text-align: center;
-    }
-}

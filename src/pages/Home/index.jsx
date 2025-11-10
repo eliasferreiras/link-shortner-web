@@ -5,6 +5,7 @@ import homeViewModel from './viewModel'
 import Header from '../../components/Header'
 import CardLink from '../../components/CardLink'
 import FormLink from '../../components/FormLink'
+import Footer from '../../components/Footer'
 
 export default function Home() {
 
@@ -44,9 +45,7 @@ export default function Home() {
                 </section>
             </main>
 
-            <footer>
-                <p>© Elias Ferreira 2025</p>
-            </footer>
+            <Footer />
         </div>
     )
 }
