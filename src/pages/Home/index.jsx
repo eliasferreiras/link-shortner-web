@@ -26,12 +26,13 @@ export default function Home() {
             <Header />
 
             <main>
-                <section className="create shadow-container">
-                    <h2>Criar link curto</h2>
+                <h1 className="mainContent">Criar link curto:</h1>
+                <section className="create shadow-container mainContent">
+                    
                     <FormLink createAction={createLink}/>
                 </section>
 
-                <section className="links shadow-container">
+                <section className="links shadow-container mainContent">
                     { 
                         links.map(link => {
                             return (

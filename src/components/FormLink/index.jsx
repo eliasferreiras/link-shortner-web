@@ -24,7 +24,7 @@ export default function FormLink({ createAction }) {
         <form action="#">
             <input type="url" className="inputUrl" name="target_url" ref={targetUrlInput} placeholder="URL de destino" />
 
-            <input type="text" className="inputTitle" name="title" ref={titleInput} placeholder="Título do link (opcional)" />
+            <input type="text" className="inputTitle" name="title" ref={titleInput} placeholder="Título (opcional)" />
             
             <button type="button" onClick={createLink}>
                 <span>Salvar</span> <i className="fa-solid fa-download"></i>
