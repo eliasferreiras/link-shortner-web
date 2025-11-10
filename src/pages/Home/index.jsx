@@ -20,7 +20,6 @@ export default function Home() {
     }, [])
 
     return (
-        
         <div className="container">
             <Header />
 
@@ -44,6 +43,10 @@ export default function Home() {
                     }
                 </section>
             </main>
+
+            <footer>
+                <p>© Elias Ferreira 2025</p>
+            </footer>
         </div>
     )
 }
