@@ -1,24 +1,45 @@
 import './style.css'
-import { useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import homeViewModel from './viewModel'
 
 import Header from '../../components/Header'
 import CardLink from '../../components/CardLink'
 import FormLink from '../../components/FormLink'
 import Footer from '../../components/Footer'
+import Modal from '../../components/Modal'
+import ConfirmDelete from '../../components/ConfirmDelete'
 
 export default function Home() {
+
+    let [selectedItem, setSelectedItem] = useState(null)
 
     const { 
         links,
         fetchLinks,
-        createLink, 
-        delteLink 
+        createLink,
+        delteLink
     } = homeViewModel()
+
+    var [openModal, setOpenModal] = useState(false)
 
     useEffect(() => {
         fetchLinks()
     }, [])
+
+    function openModalAction(link) {
+        setSelectedItem(link)
+        setOpenModal(true)
+    }
+
+    function closeModalAction() {
+        setSelectedItem(null)
+        setOpenModal(false)
+    }
+
+    async function confirmDeleteAction() {
+        await delteLink(selectedItem.id)
+        closeModalAction()
+    }
 
     return (
         <div className="container">
@@ -36,13 +57,24 @@ export default function Home() {
                     { 
                         links.map(link => {
                             return (
-                                <CardLink key={link.title} link={link} deleteAction={
-                                    (id) => delteLink(id)
+                                <CardLink key={link.id} link={link} deleteAction={
+                                    () => openModalAction(link)
                                 }/>
                             )
                         })
                     }
                 </section>
+
+                <Modal 
+                    title="Deletar Link?" 
+                    isOpen={openModal} 
+                    closeAction={closeModalAction}
+                >
+                    <ConfirmDelete 
+                        cancelAction={closeModalAction}
+                        confirmAction={confirmDeleteAction}
+                    />
+                </Modal>
             </main>
 
             <Footer />

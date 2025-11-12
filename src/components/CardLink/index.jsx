@@ -47,9 +47,7 @@ export default function CardLink({ link, deleteAction }) {
             </div>
 
             <div className="actions">
-                <button onClick={
-                    () => deleteAction(link.id)
-                }>
+                <button onClick={deleteAction}>
                     <i id="delete_icon" className="fa-solid fa-trash"></i>
                 </button>
             </div>
