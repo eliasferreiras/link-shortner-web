@@ -3,12 +3,12 @@ import { formatDate } from '../../helpers/dateHelper.js'
 
 export default function CardLink({ link, deleteAction }) {
 
-    const baseUrl = import.meta.env.VITE_REDIRECT_URL || "http://localhost:4000/"
+    const baseUrl = import.meta.env.VITE_REDIRECT_URL || "http://localhost:8080/"
 
     async function copyToClipboard() {
         try {
             await navigator.clipboard.writeText(
-                baseUrl+link.short_code
+                baseUrl+link.shortCode
             )
             alert("Link copiado!")
         } catch (error) {
@@ -24,8 +24,8 @@ export default function CardLink({ link, deleteAction }) {
                 }
 
                 <div className="shortLink">
-                    <a href={baseUrl+link.short_code}>
-                        {baseUrl+link.short_code}
+                    <a href={baseUrl+link.shortCode}>
+                        {baseUrl+link.shortCode}
                     </a>
                     <button onClick={copyToClipboard}>
                         <i className="fa-solid fa-copy"></i>
@@ -35,14 +35,14 @@ export default function CardLink({ link, deleteAction }) {
 
                 <div className="fullLink">
                     <i className="fa-solid fa-right-left"></i>
-                    <a href={link.target_url}>
-                        {link.target_url}
+                    <a href={link.targetURL}>
+                        {link.targetURL}
                     </a>
                 </div>
 
                 <div className="cardDate">
                     <i className="fa-solid fa-calendar"></i>
-                    { formatDate(link.created_at) }
+                    { formatDate(link.createdAt) }
                 </div>
             </div>
 
