@@ -8,7 +8,7 @@ export default function FormLink({ createAction }) {
     function createLink() {
         const newLink = {
             title: titleInput.current.value,
-            target_url: targetUrlInput.current.value
+            targetURL: targetUrlInput.current.value
         }
 
         clearForm()
